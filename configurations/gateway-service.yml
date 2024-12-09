@@ -3,7 +3,7 @@ spring:
     gateway:
         routes:
           - id: order-service
-            uri: lb:http://ORDER-SERVICE # Load balancing
+            uri: lb://ORDER-SERVICE # Load balancing
             predicates:
               - Path=/api/v1/**
 server:
