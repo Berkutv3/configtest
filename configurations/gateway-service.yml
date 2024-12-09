@@ -3,7 +3,7 @@ spring:
     gateway:
         routes:
           - id: order-service
-            uri: lb:http://localhost:8080 # Load balancing
+            uri: http://localhost:8080 # Load balancing
             predicates:
               - Path=/api/v1/**
 server:
