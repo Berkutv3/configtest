@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+        routes:
+        - id: order-service
+          uri: lb:http://localhost:8080 # Load balancing
+          predicates:
+            - Path=/api/v1/orders**
+server:
+  port: 9294
