@@ -5,6 +5,6 @@ spring:
         - id: order-service
           uri: lb:http://localhost:8080 # Load balancing
           predicates:
-            - Path=/api/v1/orders**
+            - Path=/api/v1/**
 server:
   port: 9294
